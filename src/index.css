@@ -45,6 +45,7 @@ body {
   url("img/bg.jpg");
   min-height: 100vh;
   line-height: 1.2;
+  overflow-x: hidden;
 
   display: flex;
   justify-content: center;
