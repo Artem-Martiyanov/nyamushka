@@ -1,0 +1,191 @@
+/*--- Trebuchet MS ---*/
+
+@font-face {
+  font-family: 'Trebuchet MS';
+  src: url('/src/fonts/Trebuchet_MS/TrebuchetMS-Bold.eot');
+  src: local('Trebuchet MS Bold'), local('TrebuchetMS-Bold'),
+  url('/src/fonts/Trebuchet_MS/TrebuchetMS-Bold.eot?#iefix') format('embedded-opentype'),
+  url('/src/fonts/Trebuchet_MS/TrebuchetMS-Bold.woff') format('woff'),
+  url('/src/fonts/Trebuchet_MS/TrebuchetMS-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Trebuchet MS';
+  src: url('/src/fonts/Trebuchet_MS/TrebuchetMS.eot');
+  src: local('Trebuchet MS'), local('TrebuchetMS'),
+  url('/src/fonts/Trebuchet_MS/TrebuchetMS.eot?#iefix') format('embedded-opentype'),
+  url('/src/fonts/Trebuchet_MS/TrebuchetMS.woff') format('woff'),
+  url('/src/fonts/Trebuchet_MS/TrebuchetMS.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*--- Exo2.0 ---*/
+
+@font-face {
+  font-family: "Exo2.0";
+  src: url('/src/fonts/Exo2.0-Thin.otf') format("opentype");
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Trebuchet MS", sans-serif;
+  color: #000;
+  margin: 0;
+  padding: 30px 0;
+  background: linear-gradient(rgba(0,0,0,0.5),
+  transparent 50%, rgba(0,0,0,0.5)),
+  url("img/bg.jpg");
+  min-height: 100vh;
+  line-height: 1.2;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#root {
+
+}
+
+/* Заголовок для поисковой выдачи */
+
+.page__header {
+  font-size: 0;
+  color: transparent;
+}
+.container {
+  margin: 0 auto;
+  max-width: 1150px;
+  padding: 0 15px;
+}
+
+.page__text {
+  font-family: "Exo2.0", sans-serif;
+  color: #fff;
+  margin: 0;
+  font-size: 36px;
+  line-height: 1.2;
+  text-align: center;
+}
+
+
+/*--- Cards Item ---*/
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  margin: 0 -40px;
+}
+.cards__item {
+  width: 320px;
+  height: 480px;
+  margin: 25px 40px;
+}
+
+
+.cards__item:hover {
+  cursor: pointer;
+}
+.item__border {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background: rgba(22, 152, 217, 1);
+  clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%, 0 10%);
+}
+.item__inner {
+  position: relative;
+  background: url("img/cat.png") no-repeat -30px 200px, rgba(242, 242, 242, 1);
+  width: 312px;
+  height: 472px;
+  border-radius: 7px;
+  clip-path: polygon(14.7% 0, 100% 0, 100% 100%, 0 100%, 0 9.7%);
+  padding-left: 44px;
+  padding-top: 20px;
+}
+
+.item__header {
+  margin-bottom: 15px;
+}
+
+.item__suptitle {
+  font-size: 16px;
+
+  color: #666666;
+  margin: 0;
+}
+.item__title {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 56px;
+  margin: 0;
+  margin-top: 5px;
+}
+.item__subtitle {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  margin: 0;
+}
+.item__description {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #666666;
+}
+.item__num {
+  font-weight: 700;
+}
+.description__p {
+  margin: 0;
+}
+
+.item__type {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  right: 12px;
+  bottom: 12px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #1698D9;
+  color: #fff;
+}
+.item__weight {
+  font-size: 42px;
+  line-height: 42px;
+}
+
+.item__kg {
+  font-size: 21px;
+  line-height: 21px;
+
+}
+
+.item__subtext {
+  color: #fff;
+  font-size: 13px;
+  line-height: 15px;
+  text-align: center;
+}
+
+
+.item__link {
+  color: rgba(22, 152, 217, 1);
+  text-decoration-style: dashed;
+}
