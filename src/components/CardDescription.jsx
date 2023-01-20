@@ -1,6 +1,6 @@
 import React from "react";
 
-export function CardDescription({description}) {
+function CardDescription({description}) {
     return (
         <p className="description__p">
             <span className="item__num">
@@ -10,3 +10,4 @@ export function CardDescription({description}) {
         </p>
     );
 }
+export default CardDescription;

@@ -1,8 +1,10 @@
-import React from "react";
-import {CardDescription} from "./CardDescription";
-import {cards} from "../data/cards";
-import {CardSubtext} from "./CardSubtext";
-export function Card({card}) {
+import React, {useState} from "react";
+import CardDescription from "./CardDescription";
+
+import CardSubtext from "./CardSubtext";
+function Card({card}) {
+
+
     return (
         <article className="cards__item">
             <div className="item__border">
@@ -27,9 +29,4 @@ export function Card({card}) {
     );
 
 }
-
-
-{/*
-
-
-            */}
+export default Card;
