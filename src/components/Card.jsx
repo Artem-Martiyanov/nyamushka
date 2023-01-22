@@ -5,7 +5,6 @@ function Card({card}) {
     const [color, setColor] = useState('');
     const [select, setSelect] = useState(true);
     const [hover, setHover] = useState(false);
-
     function isDisable() {
         let className = "cards__item";
         if (!card.count) {
@@ -13,7 +12,6 @@ function Card({card}) {
         }
         return className;
     }
-
     function selectCard() {
         if (card.count) {
             setSelect(!select);
@@ -34,7 +32,6 @@ function Card({card}) {
             setHover(false);
         }
     }
-
     return (
         <article className={isDisable()}>
             <div className="item__border"
