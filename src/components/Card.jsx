@@ -1,19 +1,29 @@
 import React, {useState} from "react";
 import CardDescription from "./CardDescription";
-
 import CardSubtext from "./CardSubtext";
 function Card({card}) {
     const [color, setColor] = useState('');
     const [select, setSelect] = useState(true);
+    const [hover, setHover] = useState(false);
 
     function selectCard() {
         setSelect(!select);
         if (select) {
-            setColor ('#D91667');
+            setColor('#D91667');
         } else if (!select) {
             setColor('');
         }
+    }
+    function mouseLeave() {
+        if (!select) {
+            setHover(true);
 
+        }
+    }
+    function mouseEnter() {
+        if (!select) {
+            setHover(false);
+        }
     }
 
     return (
@@ -21,10 +31,14 @@ function Card({card}) {
             <div className="item__border"
                  style={{backgroundColor: color}}
                  onClick={selectCard}
+                 onMouseLeave={mouseLeave}
+                 onMouseEnter={mouseEnter}
             >
                 <div className="item__inner">
                     <header className="item__header">
-                        <p className="item__suptitle">{card.suptitle}</p>
+                        <p className="item__suptitle ">
+                            {!hover ? card.suptitle : <span style={{color: '#E62E7A'}}>Котэ не одобряет?</span>}
+                        </p>
                         <h2 className="item__title">{card.title}</h2>
                         <h3 className="item__subtitle">{card.flavour}</h3>
                     </header>
@@ -37,7 +51,7 @@ function Card({card}) {
                     </div>
                 </div>
             </div>
-            <CardSubtext changeColor = {selectCard}/>
+            {!select ? <p className="item__subtext">{card.specialText}</p> : <CardSubtext changeColor = {selectCard}/>}
         </article>
     );
 }
