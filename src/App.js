@@ -4,7 +4,7 @@ import {cards} from "./data/cards";
 function App() {
   return (
       <>
-        <h1 className="page__header">Кошачий корм Нямушка</h1>
+        <h1 className="visually-hidden">Кошачий корм Нямушка</h1>
         <div className="container">
             <p className="page__text">Ты сегодня покормил кота?</p>
             <section className="cards">

@@ -49,18 +49,23 @@ body {
   justify-content: center;
   align-items: center;
 }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 #root {
   display: flex;
   width: 100%;
   padding: 30px 0;
   overflow-x: hidden;
-}
-
-/* Заголовок для поисковой выдачи */
-
-.page__header {
-  font-size: 0;
-  color: transparent;
 }
 .container {
   width: 100%;
@@ -68,6 +73,8 @@ body {
   max-width: 1150px;
   padding: 0 15px;
 }
+
+/* Заголовок для поисковой выдачи */
 
 .page__text {
   font-family: "Exo2.0", sans-serif;
@@ -92,8 +99,10 @@ body {
   max-width: 320px;
   height: 480px;
   margin: 25px 40px;
+  border: none;
+  background: none;
+  outline: none;
 }
-
 
 
 .item__border {
@@ -119,7 +128,7 @@ body {
   cursor: pointer;
 }
 
-.item__inner:hover .item__border, .item__inner:hover .item__type {
+.cards__item:hover .item__border, .item__inner:hover .item__type {
   background-color: #2EA8E6;
   transition: background-color 0.2s ease;
 }
