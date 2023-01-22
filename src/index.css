@@ -132,7 +132,21 @@ body {
   background-color: #2EA8E6;
   transition: background-color 0.2s ease;
 }
-
+.cards__item.disable .item__inner {
+  color: #B3B3B3;
+  cursor: auto;
+  opacity: 0.5;
+}
+.cards__item.disable .item__description,
+.cards__item.disable .item__suptitle {
+  color: #B3B3B3;
+}
+.cards__item.disable .item__border {
+  background-color: #B3B3B3;
+}
+.cards__item.disable .item__type {
+  background-color: #B3B3B3;
+}
 .item__header {
   margin-bottom: 15px;
 }

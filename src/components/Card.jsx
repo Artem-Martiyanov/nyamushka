@@ -6,18 +6,27 @@ function Card({card}) {
     const [select, setSelect] = useState(true);
     const [hover, setHover] = useState(false);
 
+    function isDisable() {
+        let className = "cards__item";
+        if (!card.count) {
+            className += ' disable';
+        }
+        return className;
+    }
+
     function selectCard() {
-        setSelect(!select);
-        if (select) {
-            setColor('#D91667');
-        } else if (!select) {
-            setColor('');
+        if (card.count) {
+            setSelect(!select);
+            if (select) {
+                setColor('#D91667');
+            } else if (!select) {
+                setColor('');
+            }
         }
     }
     function mouseLeave() {
         if (!select) {
             setHover(true);
-
         }
     }
     function mouseEnter() {
@@ -27,7 +36,7 @@ function Card({card}) {
     }
 
     return (
-        <article className="cards__item">
+        <article className={isDisable()}>
             <div className="item__border"
                  style={{backgroundColor: color}}
                  onClick={selectCard}
@@ -51,7 +60,8 @@ function Card({card}) {
                     </div>
                 </div>
             </div>
-            {!select ? <p className="item__subtext">{card.specialText}</p> : <CardSubtext changeColor = {selectCard}/>}
+            {!card.count ? <p className="item__subtext" style={{color: '#FFFF66'}}>Печалька, {card.flavour} закончился.</p> :
+            !select ? <p className="item__subtext">{card.specialText}</p> : <CardSubtext changeColor = {selectCard}/>}
         </article>
     );
 }
